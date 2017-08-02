@@ -1,6 +1,10 @@
 """ creating NumPy arrays """
 import numpy as np
 
+def get_max_index(a):
+    # return the index of the maximum value in given 1D array
+    return a.argmax()
+
 def test_run():
     # List to 1D array
     print(np.array([2, 3, 4]))
@@ -53,6 +57,10 @@ def test_run():
     print("Min of each column:\n", a.min(axis=0))
     print("Max of each row:\n", a.max(axis=1))
     print("Mean of all elements:\n", a.mean())
+
+    a = np.array([9, 6, 2, 3, 12, 14, 7, 10], dtype=np.int32)
+    print("max: ", a.max())
+    print("Index of max: ", get_max_index(a))
 
     
     """ functions
